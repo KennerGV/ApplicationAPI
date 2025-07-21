@@ -15,7 +15,12 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    //app.MapOpenApi();
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
@@ -27,6 +32,8 @@ app.UseOpenApi();
 app.UseSwaggerUi();
 
 app.MapControllers();
+
+app.UseRouting();
 
 app.Run();
 

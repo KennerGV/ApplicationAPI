@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.7" />
     <PackageReference Include="NSwag.Annotations" Version="14.4.0" />
     <PackageReference Include="NSwag.AspNetCore" Version="14.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationAPI.Application\ApplicationAPI.Application.csproj" />
+    <ProjectReference Include="..\ApplicationAPI.Business\ApplicationAPI.Business.csproj" />
     <ProjectReference Include="..\ApplicationAPI.Cross-Cutting\ApplicationAPI.Cross-Cutting.csproj" />
     <ProjectReference Include="..\ApplicationAPI.DataAccess.Contracts\ApplicationAPI.DataAccess.Contracts.csproj" />
   </ItemGroup>

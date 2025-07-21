@@ -1,4 +1,4 @@
-namespace AplicaciónAPI
+namespace ApplicationAPI.DataAccess.Contracts
 {
     public class WeatherForecast
     {

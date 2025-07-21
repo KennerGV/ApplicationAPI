@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mappers\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="AutoMapper" Version="15.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationAPI.Application.Contracts\ApplicationAPI.Application.Contracts.csproj" />
+    <ProjectReference Include="..\ApplicationAPI.Business.Contracts\ApplicationAPI.Business.Contracts.csproj" />
+    <ProjectReference Include="..\ApplicationAPI.DataAccess.Contracts\ApplicationAPI.DataAccess.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

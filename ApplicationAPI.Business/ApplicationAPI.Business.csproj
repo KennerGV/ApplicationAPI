@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Business\" />
+    <ProjectReference Include="..\ApplicationAPI.Business.Contracts\ApplicationAPI.Business.Contracts.csproj" />
+    <ProjectReference Include="..\ApplicationAPI.DataAccess.Contracts\ApplicationAPI.DataAccess.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
