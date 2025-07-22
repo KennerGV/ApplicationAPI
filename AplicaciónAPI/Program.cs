@@ -1,4 +1,5 @@
 ﻿using AplicaciónAPI.Installers;
+using ApplicationAPI.Cross_Cutting.Config;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,6 +35,8 @@ app.UseSwaggerUi();
 app.MapControllers();
 
 app.UseRouting();
+
+HealthCheckConfig.AddRegistration(app);
 
 app.Run();
 

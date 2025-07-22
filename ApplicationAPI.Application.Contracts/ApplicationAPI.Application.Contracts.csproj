@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationAPI.Cross-Cutting\ApplicationAPI.Cross-Cutting.csproj" />
+  </ItemGroup>
+
 </Project>
