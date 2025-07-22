@@ -14,6 +14,7 @@ namespace AplicaciónAPI.Installers
                 var config = new MapperConfiguration(cfg =>
                 {
                     cfg.AddProfile<WeatherMappingProfile>();
+                    cfg.AddProfile<HealthCheckMappingProfile>();
                 }, loggerFactory);
 
                 return config.CreateMapper();
