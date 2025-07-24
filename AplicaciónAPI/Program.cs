@@ -13,10 +13,9 @@ builder.Services.InstallServiceInAssembly(builder.Configuration);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configuración del pipeline
 if (app.Environment.IsDevelopment())
 {
-    //app.MapOpenApi();
     app.UseDeveloperExceptionPage();
 }
 else
@@ -25,16 +24,17 @@ else
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.UseOpenApi();
-
-app.UseSwaggerUi();
-
-app.MapControllers();
+app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.UseOpenApi(); 
+app.UseSwaggerUi();
+
+app.MapControllers(); 
 
 HealthCheckConfig.AddRegistration(app);
 

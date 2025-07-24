@@ -9,6 +9,7 @@ namespace ApplicationAPI.Application.Contracts.DTO
 {
     public class HealthCheckResponseDTO
     {
+        public string Status {  get; set; }
         public IEnumerable<HealthCheckEndPointDTO> HealthChecks { get; set; }
         public string HealthCheckDuration { get; set; }
     }

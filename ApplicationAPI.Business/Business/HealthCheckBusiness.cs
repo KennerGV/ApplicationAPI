@@ -28,7 +28,7 @@ namespace ApplicationAPI.Business.Business
                     Component = x.Key,
                     Status = x.Value.Status.ToString(),
                     Description = x.Value.Description,
-                    Duration = x.Value.Duration.ToString()
+                    //Duration = x.Value.Duration.ToString()
                 }),
                 HealthCheckDuration = report.TotalDuration.ToString()
             };
