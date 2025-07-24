@@ -24,11 +24,8 @@ namespace ApplicationAPI.Application.Services
 
         public Task<HealthCheckResponse> GetHealth()
         {
+            
             var healthResponse = _businessAPI.ObtenerEstadoAsync();
-
-            var response = new HealthCheckResponse();
-
-            //response = _mapper.Map<HealthCheckResponse>(healthResponse);
 
             return healthResponse;
         }
